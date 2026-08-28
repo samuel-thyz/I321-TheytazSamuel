@@ -1,0 +1,19 @@
+' Fichier : etape-01-mcd.puml
+' Rôle : MCD de la carte des pizzas
+' Auteur : Samuel Theytaz
+' Date : 28.08.2026
+@startuml
+title MCD - carte des pizzas
+
+entity PIZZAS {
+  title
+  image
+  price
+}
+
+entity INGREDIENTS {
+  name
+}
+
+PIZZAS "1,N" -- "0,N" INGREDIENTS : contient
+@enduml

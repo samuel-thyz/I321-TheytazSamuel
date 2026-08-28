@@ -1,0 +1,26 @@
+' Fichier : etape-01-mld.puml
+' Rôle : MLD de la carte des pizzas
+' Auteur : Samuel Theytaz
+' Date : 28.08.2026
+@startuml
+title MLD - carte des pizzas
+
+entity PIZZAS {
+  * title : PK
+  --
+  image
+  price
+}
+
+entity INGREDIENTS {
+  * name : PK
+}
+
+entity CONTIENT {
+  * title : FK
+  * name : FK
+}
+
+PIZZAS ||--o{ CONTIENT
+INGREDIENTS ||--o{ CONTIENT
+@enduml

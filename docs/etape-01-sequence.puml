@@ -1,0 +1,23 @@
+' Fichier : etape-01-sequence.puml
+' Rôle : diagramme de séquence de la création d'une pizza
+' Auteur : Samuel Theytaz
+' Date : 28.08.2026
+@startuml
+title Création d'une pizza (POST /pizzas)
+
+actor "Pizzaïolo" as Pizzaiolo
+participant "Route\n(présentation)" as Route
+participant "Contrôleur\n(métier)" as Controleur
+participant "Pizza\n(données)" as Pizza
+database "Base de données" as BD
+
+Pizzaiolo -> Route : POST /pizzas (title, image, ingredients, price)
+Route -> Controleur : create(req, res)
+Controleur -> Controleur : valider les données reçues
+Controleur -> Pizza : create(pizza)
+Pizza -> BD : enregistrer la pizza
+BD --> Pizza : pizza enregistrée (id)
+Pizza --> Controleur : pizza
+Controleur --> Route : 201 Created (pizza)
+Route --> Pizzaiolo : 201 Created + JSON
+@enduml
