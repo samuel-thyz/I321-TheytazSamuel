@@ -1,0 +1,18 @@
+# Fichier : .gitignore
+# Rôle : fichiers et dossiers exclus du dépôt
+# Auteur : Samuel Theytaz
+# Date : 28.08.2026
+
+# Dépendances
+node_modules/
+
+# Variables d'environnement (contiennent des données sensibles)
+.env
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# Système
+.DS_Store

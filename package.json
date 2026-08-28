@@ -1,0 +1,17 @@
+{
+  "name": "i321-foodtruck-api",
+  "version": "1.0.0",
+  "description": "API REST du projet Foodtruck (module I321)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "author": "Samuel Theytaz",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2"
+  }
+}
